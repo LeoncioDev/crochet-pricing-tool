@@ -1,8 +1,9 @@
 import tkinter as tk
 from tkinter import messagebox
-from calculos import calcular_preco  # Importa a função do outro arquivo
+from calculos import calcular_preco
+from atualizador import verificar_atualizacao  
 
-janela_ajustada = False  # Flag para controlar crescimento da janela só na primeira vez
+janela_ajustada = False
 
 def str_para_float(valor_str):
     try:
@@ -49,7 +50,7 @@ def executar_calculo():
         if not janela_ajustada:
             largura = janela.winfo_width()
             altura = janela.winfo_height()
-            nova_altura = altura + 100  # ajuste o valor se precisar
+            nova_altura = altura + 100
             janela.geometry(f"{largura}x{nova_altura}")
             janela.update()
             janela_ajustada = True
@@ -57,12 +58,14 @@ def executar_calculo():
     except ValueError:
         messagebox.showerror("Erro", "Preencha todos os campos corretamente com números válidos!")
 
+def checar_versao():
+    info = verificar_atualizacao()
+    messagebox.showinfo("Verificação de versão", info)
+
 # Janela principal
 janela = tk.Tk()
 janela.title("💖 Calculadora da Lami 💖")
 janela.configure(bg="#fff0f5")
-
-# Define tamanho inicial da janela
 janela.geometry("420x680")
 janela.minsize(420, 680)
 
@@ -110,12 +113,24 @@ for i, (texto, chave) in enumerate(extras, start=linha_inicio+1):
     ent.grid(row=i, column=1, padx=20, pady=3)
     entries[chave] = ent
 
-botao = tk.Button(janela, text="Calcular 💰", command=executar_calculo,
-                  bg="#d63384", fg="white", font=("Segoe UI", 12, "bold"), width=20)
-botao.grid(row=len(campos) + len(extras) + 2, column=0, columnspan=2, pady=15)
+linha_botoes = len(campos) + len(extras) + 2
 
-resultado_label = tk.Label(janela, text="", font=("Segoe UI", 11), bg="#f9e6f0", fg="#2d6a4f",
-                           justify="left", wraplength=370, relief="solid", bd=1, padx=10, pady=10)
-resultado_label.grid(row=len(campos) + len(extras) + 3, column=0, columnspan=2, padx=20, pady=(0,20), sticky="ew")
+botao = tk.Button(
+    janela, text="Calcular 💰", command=executar_calculo,
+    bg="#d63384", fg="white", font=("Segoe UI", 12, "bold"), width=20
+)
+botao.grid(row=linha_botoes, column=0, columnspan=2, pady=10)
+
+resultado_label = tk.Label(
+    janela, text="", font=("Segoe UI", 11), bg="#f9e6f0", fg="#2d6a4f",
+    justify="left", wraplength=370, relief="solid", bd=1, padx=10, pady=10
+)
+resultado_label.grid(row=linha_botoes + 1, column=0, columnspan=2, padx=20, pady=(0, 20), sticky="ew")
+
+botao_versao = tk.Button(
+    janela, text="Verificar versão 🔍", command=checar_versao,
+    bg="#d63384", fg="white", font=("Segoe UI", 10, "bold"), width=20
+)
+botao_versao.grid(row=linha_botoes + 2, column=0, columnspan=2, pady=(0, 20))
 
 janela.mainloop()
