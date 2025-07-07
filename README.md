@@ -1,58 +1,94 @@
-# Calculadora de Crochê
+# 🧶 Calculadora de Crochê – Precificação Inteligente para Artesãos
 
-## Descrição do Projeto
-
-A **Calculadora de Crochê** é uma aplicação desenvolvida para facilitar o cálculo do preço de produtos artesanais feitos em crochê. Ela considera os custos de mão de obra, material, custos extras opcionais e margem de lucro para fornecer um preço final justo, ajudando artesãs e artesãos a profissionalizarem seus negócios.
-
-## Objetivo
-
-O principal objetivo deste projeto é oferecer uma ferramenta prática e confiável para que artesãos possam precificar seus produtos de forma transparente e eficiente, levando em conta todos os custos envolvidos na produção, desde o tempo dedicado até os materiais e despesas adicionais.
-
-## Funcionalidades
-
-- **Cálculo do custo da mão de obra:** Baseado nas horas trabalhadas e valor da hora.
-- **Cálculo do custo do material:** Considera o peso e valor do rolo de linha e a quantidade usada.
-- **Custos extras opcionais:** Permite incluir valores para papel, brindes, tags e cartões.
-- **Margem de lucro configurável:** Aplica uma porcentagem de lucro para obter o preço final.
-- **Interface gráfica amigável:** Desenvolvida em Tkinter, aceita números com vírgula ou ponto decimal.
-- **Ajuste automático da interface:** Expande a janela somente na primeira visualização dos resultados, para melhor usabilidade.
-
-## Público-Alvo
-
-Este projeto é direcionado a:
-
-- Artesãs e artesãos que desejam precificar seus produtos com mais precisão.
-- Pequenos negócios de produtos manuais que precisam calcular custos e preços.
-- Entusiastas do crochê interessados em ferramentas para facilitar seu trabalho.
-
-## Tecnologias Utilizadas
-
-- Linguagem de programação: **Python 3**
-- Biblioteca para interface gráfica: **Tkinter**
-
-## Sobre o Código
-
-O código é modularizado para facilitar manutenção e possíveis melhorias futuras, com funções claras para cálculo e interface separadas, além de validação robusta para entradas do usuário.
-
-## Licença
-
-Este projeto está licenciado sob a licença MIT — veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
-Você pode usar, copiar, modificar, distribuir e até utilizar este código em projetos comerciais, desde que preserve os avisos de direitos autorais originais.
-
-## Contato
-
-Para dúvidas, sugestões ou contribuições, entre em contato:
-
-- Email: leonciodev.contact@gmail.com  
-- GitHub: [https://github.com/LeoncioDev](https://github.com/LeoncioDev)
+Aplicativo simples e eficaz feito em **Python** para auxiliar artesãos na **precificação justa** de produtos de crochê, considerando custos reais e margem de lucro.
 
 ---
 
-## Considerações Finais
+## 🖼️ Demonstração
 
-Este projeto demonstra capacidade técnica em desenvolvimento de software para soluções práticas voltadas a um nicho artesanal, além de atenção à usabilidade e aos aspectos comerciais do negócio manual.
+*Adicione aqui um GIF ou imagem da interface, se desejar.*
 
 ---
 
-*Obrigado por visualizar este projeto!*
+## ✅ Funcionalidades
+
+- 💼 Cálculo do custo da **mão de obra** com base em horas e valor/hora
+- 🧵 Cálculo do **material usado** por peso e custo do rolo
+- 🎁 Inclusão de **custos extras opcionais**: brindes, tags, papel etc.
+- 📈 Margem de lucro configurável em porcentagem
+- 🖥️ Interface gráfica com **Tkinter**, adaptável e amigável
+- 🔢 Aceita números com **vírgula ou ponto decimal**
+- 🧩 Interface ajusta o tamanho **dinamicamente** ao exibir resultados
+
+---
+
+## 🎯 Objetivo
+
+Oferecer uma ferramenta prática para **profissionalizar o artesanato**, permitindo que artesãs e artesãos calculem preços com precisão, levando em conta **tempo, material, custos adicionais e lucro**.
+
+---
+
+## 🧱 Arquitetura do Projeto
+
+| Camada     | Tecnologia        |
+|------------|-------------------|
+| Backend    | Python 3          |
+| Interface  | Tkinter (GUI)     |
+| Estrutura  | Código modular    |
+
+---
+
+## 👥 Público-Alvo
+
+Este projeto é ideal para:
+- Artesãs e artesãos que querem precificar corretamente seus produtos
+- Pequenos negócios manuais
+- Entusiastas do crochê e do artesanato profissional
+
+---
+
+## 🧪 Tecnologias Utilizadas
+
+- **Python 3** – Linguagem principal
+- **Tkinter** – Criação da interface gráfica
+- **Modularização** – Separação de lógica e interface
+- **Validação robusta** – Tratamento de entradas do usuário
+
+---
+
+## 📁 Estrutura do Projeto
+
+croche-calculadora/
+├── calculadora.py        # Lógica principal da calculadora  
+├── interface.py          # Código da interface gráfica com Tkinter  
+├── utils.py              # Funções auxiliares e validações  
+├── requirements.txt      # (opcional) Bibliotecas necessárias  
+├── LICENSE               # Licença MIT  
+└── README.md             # Este arquivo  
+
+---
+
+## 🔐 Licença
+
+Este projeto está sob a **licença MIT**.  
+Você pode usar, modificar e distribuir livremente, inclusive para fins comerciais.  
+Veja o arquivo [`LICENSE`](LICENSE) para mais detalhes.
+
+---
+
+## 📬 Contato
+
+Entre em contato para dúvidas ou sugestões:
+
+- 📧 Email: leonciodev.contact@gmail.com  
+- 🐙 GitHub: [@LeoncioDev](https://github.com/LeoncioDev)
+
+---
+
+## 🧵 Considerações Finais
+
+Este projeto demonstra aplicação prática de **desenvolvimento em Python** para um nicho real, com foco em **usabilidade, organização e valor comercial** para o pequeno empreendedor artesanal.
+
+---
+
+*Obrigado por conferir este projeto!*
