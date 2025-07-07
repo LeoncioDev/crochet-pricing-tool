@@ -2,11 +2,6 @@
 
 Aplicativo simples e eficaz feito em **Python** para auxiliar artesãos na **precificação justa** de produtos de crochê, considerando custos reais e margem de lucro.
 
----
-
-## 🖼️ Demonstração
-
-*Adicione aqui um GIF ou imagem da interface, se desejar.*
 
 ---
 
